@@ -1,0 +1,25 @@
+name: mario_siamese
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.18
+  - pytorch=2.4.1
+  - pytorch-cuda=12.4
+  - torchaudio=2.4.1
+  - torchvision=0.19.1
+  - pip:
+      - matplotlib==3.8.3
+      - numpy==1.24.4
+      - opencv-python==4.9.0.80
+      - opencv-python-headless==4.10.0.84
+      - pandas==1.5.3
+      - scikit-image==0.24.0
+      - scikit-learn==1.4.1.post1
+      - seaborn==0.13.2
+      - tensorboard==2.11.2
+      - timm==1.0.9
+      - tqdm==4.66.2
+prefix: /home/marcus/miniconda3/envs/mario_siamese
