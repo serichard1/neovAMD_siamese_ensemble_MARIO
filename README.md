@@ -1,13 +1,12 @@
-[MICCAI 2024](./docs/miccai2024-logo.png)
+![MICCAI 2024](./docs/miccai2024-logo.png)
 
-## Siamese-Ensemble-MARIOchall
 Multi-modal Siamese Ensemble for Neovascular AMD classification and prediction from Optical Coherence Tomography
 =======
 ## [🕹️ 🍄 Monitoring Age-related Macular Degeneration Progression In Optical Coherence Tomography (MARIO) - MICCAI Challenge 2024](https://youvenz.github.io/MARIO_challenge.github.io/)
 
 PyTorch implementation of **Multi-modal Siamese Ensemble for Neovascular AMD classification and prediction from Optical Coherence Tomography**
 
-[Method](./docs/architecture_siamese_ensemble.eps)
+![Method](./docs/architecture_siamese_ensemble.eps)
 
 ## Getting started
 
@@ -19,7 +18,7 @@ conda activate mario_siamese
 
 ### Dataset
 
-See MARIO challenge link; summary:
+**Please see MARIO challenge link; summary:** \
 The provided ground truth consists of pairwise comparisons between B-scans from the same patient across visits, indicating relative progression as the classes: reduced (0), stable (1), worsened (2), or other (3). There are 68 patients in the dataset, for a total of 14,496 pairwise comparisons. An additional external evaluation set is provided, which includes 34 patients, totaling 7,010 comparisons. For Task 2, a subset of the same patient cohort is used, but only the first B-scan is provided, and the third ("other") class is excluded. There are 61 patients, for a total of 8,082 comparisons. External evaluation for Task 2 includes 29 patients and 3,822 comparisons. 
 
 **Prior to training**
@@ -49,8 +48,8 @@ python3 training.py --img_size 384 384 --data_path ./data/ --output_dir convnext
 # Training Hyperparameters
 --img_size                [int, int]  "Input size for the images (default: depends on model architecture)."
 --learning_rate           float       "Initial value of the learning rate (default: 5e-5)."
---model                   str         "Model architecture to use (default: "convnext_tiny")."
-                                      "Choices: ["convnext_tiny", "efficientnet_v2_s", "inception_resnet_v2", "siamese_ensemble"]."
+--model                   str         "Model architecture to use (default: 'convnext_tiny')."
+                                      "Choices: ['convnext_tiny', 'efficientnet_v2_s', 'inception_resnet_v2', 'siamese_ensemble']."
 --weight_decay            float       "Regularization strength to prevent overfitting (default: 0.05)."
 --batch_size_per_gpu      int         "Batch size per GPU (default: 16)."
 --n_epochs                int         "Number of training epochs (default: 100)."
@@ -63,8 +62,8 @@ python3 training.py --img_size 384 384 --data_path ./data/ --output_dir convnext
 # Training Environment
 --use_fp16                bool        "Use half-precision for faster training and lower memory usage (default: True)."
 --num_workers             int         "Number of data loading workers per GPU (default: 4)."
---data_path               str         "Path to the dataset (default: "data")."
---output_dir              str         "Directory to save logs and checkpoints (default: "./output")."
+--data_path               str         "Path to the dataset (default: 'data')."
+--output_dir              str         "Directory to save logs and checkpoints (default: './output')."
 --seed                    int         "Random seed for reproducibility (default: 3407)."
 
 # Logging and Evaluation
